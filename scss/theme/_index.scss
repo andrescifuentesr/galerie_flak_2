@@ -76,7 +76,8 @@ z-index:-9999;
 		
 		.module-slider-home {
 						position: relative;
-					    margin: 2em 10%;	
+					    margin: 2em 10%;
+					    @include mq(tablette) {margin: 2em 5%;}
 						@include mq(petit-ecran) {margin:2em 0;}
 
 		}

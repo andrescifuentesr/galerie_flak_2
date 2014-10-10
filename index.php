@@ -65,17 +65,7 @@ get_header(); ?>
 					<?php else : ?>
 					
 						<div class="module-slider-home clearfix">
-							<?php // On prend l'id de Nouvelles adquisitions ?>
-							<?php $page_id = 23 ?>
-							<?php $page_link = get_category_link( $page_id ); ?>
-						
-							<a href="<?php echo esc_url( $page_link ); ?>" >			
-								<?php // slider local ?>
-								<?php //if ( function_exists( 'soliloquy_slider' ) ) soliloquy_slider( '1895' ); ?>
-		
-								<?php // slider ligne ?>
-								<?php if ( function_exists( 'soliloquy_slider' ) ) soliloquy_slider( '4330' ); ?>
-							</a>
+							<?php get_template_part( 'inc/slider' );  ?>
 						</div>
 						
 					<?php endif; ?>
