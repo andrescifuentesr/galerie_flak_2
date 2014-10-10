@@ -1,0 +1,36 @@
+/* ========= Services =========== */
+
+article#post-17 {font-size:0.9em;
+		margin:0 5%;
+		@include mq(tablette) {margin:0 10%;}
+		@include mq(petit-ecran) {margin:0;}
+
+	.gauche {width:50%;
+			float:left;	
+			margin-top:6em;
+			@include mq(tablette) {width:70%; margin:2em 15% 0;}
+			@include mq(petit-ecran) {width:100%; margin-top:2em; }
+				
+			p {margin-bottom:0.5em;
+			}
+			
+			a {text-decoration:underline;}
+	}
+
+	.droite {text-align:center;
+			@include mq(tablette) {margin:0; width:100%;}
+			@include mq(petit-ecran) {margin:0; width:100%;} 
+
+		.cecoa {width:30%;
+			float:right;
+			margin:6em 10% 0 10%;
+			@include mq(tablette) {width:60%; margin:5em 20% 2em;}
+			@include mq(petit-ecran) {width:90%; margin:3em 5%; }
+
+	
+			p {margin:0 2em; line-height:1.4em;}
+			
+		}
+	}
+	
+}//article #post-17

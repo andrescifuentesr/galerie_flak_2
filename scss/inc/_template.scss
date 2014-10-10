@@ -1,0 +1,752 @@
+/*
+Theme Name: galerie_flak
+Theme URI: http://www.galerieflak.com/
+Author: cuyabroweb
+Author URI: http://www.cuyabroweb.com/
+Description: Description
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ ocifu is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	//clear: both;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ccc;
+	border-color: #ccc #ccc #bbb #ccc;
+	border-radius: 3px;
+	background: #e6e6e6;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	color: rgba(0,0,0,.8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	font-size: 1.4rem;
+	line-height: 1;
+	padding: 1.12em 1.5em 1em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type=text],
+input[type=email] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+	color: royalblue;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #808080;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	display: block;
+	float: left;
+	font-family:'HelveticaNeueLT-UltraLight', Helvetica, Arial;
+	letter-spacing:1px;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 1em 0 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	float: left;
+	position: relative;
+	text-transform:uppercase;
+	font-size:0.92em;
+	padding: 0.5em 1%; 
+	@include mq(tablette-landscape) {padding: 0.5em 0.3em; width: 12%;}
+}
+
+.main-navigation li:nth-child(1) {
+	@include mq(tablette-landscape) {width: 15%; }
+} 
+
+.main-navigation li:nth-child(2) {
+	@include mq(tablette-landscape) {width: 15%;}
+}
+
+.main-navigation li:nth-child(3) {
+	@include mq(tablette-landscape) {width: 15%; }
+}
+
+.main-navigation li:nth-child(4) {
+	@include mq(tablette-landscape) {width: 15%; }
+}
+
+.main-navigation li:nth-child(5) {
+	@include mq(tablette-landscape) {width:10%;}
+}
+
+.main-navigation li:nth-child(6) {
+	@include mq(tablette-landscape) {width:9%;}
+}
+
+.main-navigation li:nth-child(7) {
+	@include mq(tablette-landscape) {width:11%;}
+}
+
+.main-navigation li:nth-child(7) {
+	@include mq(tablette-landscape) {width:9%;}
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	text-align:center;
+	@include mq(tablette-landscape) {text-align:center;}
+	@include mq(tablette) {text-align:left;}
+}
+.main-navigation ul ul {
+	display: none;
+	position: absolute;
+	top: 1em;
+	left: 2.58emem;
+	z-index: 99999;
+	width:100%;
+	padding:0;
+	width:13.5em;
+	@include box-shadow(0, 1px, 1px, 0px, #000000);
+	//background-color: $fondo;
+}
+
+.main-navigation ul ul ul {
+	display: none;
+	position: absolute;
+	top: -1em;
+	left: 14.7em;
+	z-index: 99999;
+	width:100%;
+	padding:0;
+	@include box-shadow(1px, 1px, 1px, 0px, #000000);
+	//background-color: $fondo;
+}
+
+
+.main-navigation ul ul a {
+	font-size:0.95em;
+	width: 15em;
+	display:block;
+	text-align:left;
+}
+
+.main-navigation ul ul ul a {
+	font-size:1em;
+}
+
+.main-navigation ul .sub-menu li, .main-navigation ul ul .sub-menu li {
+	float:none;
+	padding:0.3em 0.5em;
+	width:100%;
+	background-color: $fondo;
+	//border-top: 1px solid rgba(255,255,255,.1);
+	//border-bottom: 1px solid rgba(0,0,0,1.0);
+}
+
+.main-navigation ul .sub-menu > li:first-child, .main-navigation ul ul .sub-menu > li:first-child  {
+	border-top:none;
+	//border-bottom: 1px solid rgba(0,0,0,1.0);
+}
+
+.main-navigation ul .sub-menu > li:last-child, .main-navigation ul ul .sub-menu > li:first-child {
+	list-style:none;
+	//border-bottom: none;
+}
+
+.main-navigation ul li:hover > ul {
+  display: block; 
+}
+
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+  color: #808080; 
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+}
+.main-small-navigation .menu {
+	display: none;
+}
+
+//Css pour le Menu toggle
+@media only screen and (max-width: 56em) {
+
+	#menu-menu-principal:after {content: "";
+	    background:  url(img/bg.png) repeat;
+	    opacity: 0.3;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    position: absolute;
+	    z-index: -1;
+		@include rounded (10px);
+	}
+
+	#menu-menu-principal {
+		position: relative;
+		margin : 2em 0 0;
+		text-transform:uppercase;
+		-webkit-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+		-moz-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+		box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+		@include rounded (10px);
+	}
+
+	#menu-menu-principal li {
+		list-style:none;
+	}
+
+	#menu-menu-principal > li {
+		border-top: 1px solid rgba(255,255,255,.1);
+		border-bottom: 1px solid rgba(0,0,0,1.0);
+	}
+
+	#menu-menu-principal > li:first-child {
+		border-top:none;
+		border-bottom: 1px solid rgba(0,0,0,1.0);
+	}
+
+	#menu-menu-principal > li:last-child {
+		list-style:none;
+		border-bottom: none;
+	}
+
+	#menu-menu-principal li > ul {
+		margin-left:0;
+	}
+
+	#menu-menu-principal li > ul li {
+		font-style:italic;
+		font-family: "futura_ltlight", arial;
+		text-transform:none;
+		border-top: 1px solid rgba(255,255,255,.1);
+		border-bottom: 1px solid rgba(0,0,0,1.0);
+		background: rgba(0,0,0,0.1);
+	}
+	
+	#menu-menu-principal li > ul li a {
+		padding-left:3em;
+	}
+	
+	#menu-menu-principal li > ul ul li a {
+		padding-left:6em;
+	}	
+	
+	#menu-menu-principal li > ul li:last-child {
+		border-bottom: none;
+	}
+
+	.menu-menu-principal-container, .menu-menu-principal-container > ul ul {
+		overflow: hidden;
+		max-height: 0;
+	}
+	.menu-menu-principal-container.active, .menu-menu-principal-container > ul ul.active {
+		max-height: 78em;
+	}
+
+	.menu-menu-principal-container li a {
+		position:relative;
+		display:block;
+		padding:1em;		
+	}
+	
+	.menu-menu-principal-container li a:hover {	
+		background: rgba(0,0,0,0.1);
+	}	
+	
+	.menu-menu-principal-container li.menu-item-278 > a:after,
+	.menu-menu-principal-container li.menu-item-279 > a:after,
+	.menu-menu-principal-container li.menu-item-280 > a:after,
+	.menu-menu-principal-container li.menu-item-236 > a:after,
+	.menu-menu-principal-container li.menu-item-8976 > a:after 
+	{
+	    content: '';
+	    position: absolute;
+	    top: 50%;
+	    right: 1em;
+	    width: 0;
+	    height: 0;
+	    border-top: 5px solid transparent;
+	    border-bottom: 5px solid transparent;
+	    border-left: 5px solid white;
+	    display: block;
+	    font-size: 1.5em;
+	}
+	.menu-menu-principal-container li.menu-item-278 > a.active:after,
+	.menu-menu-principal-container li.menu-item-279 > a.active:after,
+	.menu-menu-principal-container li.menu-item-280 > a.active:after,
+	.menu-menu-principal-container li.menu-item-236 > a.active:after,
+	.menu-menu-principal-container li.menu-item-8976 > a.active:after
+	 {
+		content: "";
+	    border-top: 5px solid white;
+	    border-right: 5px solid transparent;
+	    border-left: 5px solid transparent;
+	}
+	
+	.menu-menu-principal-container, 
+	.menu-menu-principal-container > ul ul, 
+	.menu-menu-principal-container > ul ul ul
+	{
+		-webkit-transition: all 0.3s ease-out;  
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+	
+}
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.entry-meta {
+	clear: both;
+}
+.byline {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	max-width: 100%;
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	margin-bottom: 1.5em;
+}
+.wp-caption img {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-content .site-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+.bypostauthor {
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+

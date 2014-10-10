@@ -1,0 +1,67 @@
+/* ========= Category =========== */
+
+.page-search {font-family:'futura_ltlight', arial;
+			margin-bottom : 2em;
+			@include mq(tablette) {margin:0 0 1em;}
+			@include mq(petit-ecran) {margin:0 0 1em;}
+			
+			.page-title {
+						padding:0 0.5em;
+						background-color:#222222;
+			}
+}
+
+.module-search {margin: 0 10%;
+				@include mq(tablette) {margin:0;}
+				@include mq(petit-ecran) {margin:0;}
+
+				.module-search-image {@include mq(petit-ecran) {text-align:center; } 
+
+									img {max-width:100%; 
+										@include box-shadow(-1px, 1px, 6px, 0px, #000000);
+										margin-right:2em;
+										float:left;
+										@include mq(petit-ecran) {float:none; }  
+									}
+
+				}
+				
+				.module-search-txt {padding-top:1em;
+									font-size: 0.9em; 
+				
+									h1 { @include mq(petit-ecran) {text-align:center; } }
+				}
+
+
+}
+
+/*
+Default style for WP-PageNavi plugin
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+.wp-pagenavi {
+	clear: both;
+	text-align: center;
+	margin: 2.5em 0;
+	font-family: "futura_ltlight", arial;
+	font-size: 0.9em; 
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	border: 1px solid #bfbfbf;
+	padding: 5px 8px;
+	margin: 2px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-ms-border-radius: 2px; 
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border: 1px solid black; 
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold; 
+}

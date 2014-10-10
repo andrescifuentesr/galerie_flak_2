@@ -1,0 +1,17 @@
+/* ========= Nouvelles acquisitions =========== */
+
+article#post-4 {font-size:0.9em;
+		margin:0 5%;
+		@include mq(tablette) {margin:0;}
+		@include mq(petit-ecran) {margin:0;}	
+
+	.module-slider {
+		float:left;
+		margin:5em 0;
+		width:100%;	
+		@include mq(tablette-landscape) {margin:3em 0;}
+		@include mq(tablette) {margin:2em 0;}
+		@include mq(petit-ecran) {margin:2em 0;}
+	}
+	
+}//article #post-4

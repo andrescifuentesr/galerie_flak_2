@@ -1,0 +1,73 @@
+/* ========= Infos =========== */
+
+article#post-15 {font-size:0.9em;
+		margin:0 5%;
+
+	.module-infos {
+		float:left;
+		width:100%;	
+		
+			.interieur {float:left;
+						width:45%;
+						@include mq(tablette) {width:100%; }
+						@include mq(petit-ecran) {width:100%; }
+						}
+			
+			.gauche {margin-right:5%;
+					margin-top:6em;
+					@include mq(tablette-landscape) {margin-top:3em;}
+					@include mq(tablette) {margin-right:0; margin-top:1em;}
+					@include mq(petit-ecran) {margin-right:0; margin-top:1em;}
+			}
+		
+			.droite{margin-left:5%;
+					margin-top:6em;
+					@include mq(tablette-landscape) {margin-top:3em;}
+					@include mq(tablette) {margin-left:0; margin-top:1em;}
+					@include mq(petit-ecran) {margin-left:0; margin-top:1em;}
+			}
+			
+			.info-acces {
+				
+				div {float:left;
+					width:50%;
+					padding-top:1em;
+					@include mq(tablette) {width:100%;}
+					@include mq(petit-ecran) {width:100%;}
+				}
+
+				img {margin-top:2em;}
+			}
+		
+			.cadre-gris {
+						width:45%; 
+						min-height: 8em; 
+						float:left;
+						margin-top:-1em; 
+						display:block; 
+						margin-right:5%;
+						@include mq(tablette) {margin:2em 0 0;}
+						@include mq(petit-ecran) {width:80%; margin:2em 0 0;}
+						
+						img {max-width: 100%;}
+			}
+		
+			.galerie{display:block; 
+					float:right; 
+					width:50%;
+					@include mq(tablette) {width:100%;}
+					@include mq(petit-ecran) {width:100%;}
+			}
+			
+			.info-acces-map {max-width:100%;}
+		
+			h1 {text-transform:uppercase;
+				font-size:1.5em;
+				border-bottom:2px solid #000000;
+				text-transform:uppercase;
+				margin-bottom:3em;}
+			
+	}
+
+
+}//article #post-17

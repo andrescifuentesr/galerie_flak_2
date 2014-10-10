@@ -1,0 +1,87 @@
+/* Gallery */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#instant-gallery{
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	margin-bottom: 3em;
+	}
+
+/* Main Display Area */
+
+#ig-main{	
+	float:left;
+	width: 66%;
+	text-align:center;
+	padding:0 17%;
+ 	}
+
+#ig-main img{	-webkit-box-shadow: -1px 1px 4px 0px black;
+      -moz-box-shadow: -1px 1px 4px 0px black;
+      -o-box-shadow: -1px 1px 4px 0px black;
+      box-shadow: -1px 1px 4px 0px black;
+	  max-width:100%;
+}
+
+/* Thumbnails */
+
+#ig-thumbs {
+	float:left;
+	width: 20%;
+	overflow: hidden;
+	margin: 0;
+	}
+ 
+#ig-thumbs li{	
+	//border: 1px solid #aaa !important;	
+	padding-right: 1em;
+	padding-bottom:1em;
+	float: left;
+	display: inline; 
+	cursor: pointer;
+	width:50%;
+	}
+
+
+#ig-thumbs li:nth-child(3) {clear:left;}
+#ig-thumbs li:nth-child(5) {clear:left;}
+
+#ig-thumbs img{
+	width: 100%;				/* Customize to change Thumbnail Width */
+	height: auto;				/* Customize to change Thumbnail Height */
+	border: 1px solid transparent !important;
+	-webkit-box-shadow: -1px 1px 2px 0px black;
+	      -moz-box-shadow: -1px 1px 2px 0px black;
+	      -o-box-shadow: -1px 1px 2px 0px black;
+	      box-shadow: -1px 1px 2px 0px black;
+	}
+
+#ig-thumbs li img:hover,
+#ig-thumbs li img.selected{ 
+	border: 1px solid #aaa !important;
+	}
+	
+	
+@media only screen and (max-width: 37.5em) {
+
+	#ig-main{width: 100%; padding:0 10%;}
+	#ig-thumbs {width: 100%; text-align:center;}
+	#ig-thumbs li{padding-right: 0%; width:20%; display: inline-block; float:none;}
+	#ig-thumbs li:nth-child(5) {display:none;}
+	#instant-gallery{margin-bottom: 0em;}
+}
+	
+@media only screen and (min-width: 37.5em)  and (max-width:  56em) {
+	#ig-main{width: 70%;}
+	#ig-thumbs {width: 30%;}
+}
+
+@media only screen and (min-width: 56em)  and (max-width:  78em) {
+	#ig-main{width: 75%;}
+	#ig-thumbs {width: 25%;}
+}

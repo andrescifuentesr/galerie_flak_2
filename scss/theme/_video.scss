@@ -1,0 +1,32 @@
+//========Video
+
+.list_video {
+	position: relative;
+	width: 100%;
+	padding: 0 2em;
+	@include mq(tablette) {background: none; padding: 0;}
+	@include mq(petit-ecran) {min-height: none; padding: 0;}
+}
+
+.list_video ul {
+	list-style: none;
+	display: block;
+	margin: 0; 
+}
+
+.list_video li {
+	display: block;
+	float: left;
+	padding: 1em;
+	width: 33.33%;
+	height: auto;
+	@include mq(tablette-landscape) {width: 50%;}
+	@include mq(tablette) {width: 50%;}
+	@include mq(petit-ecran) {width: 100%;}
+}
+
+.list_video .slider-title {
+	font-size: 0.82em;
+	text-align: center;
+	font-family: "futura_ltlight", arial; 
+}

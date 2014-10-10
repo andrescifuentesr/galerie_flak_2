@@ -1,0 +1,64 @@
+/* ========= Contact =========== */	
+article#post-19 {font-size:0.9em;
+		padding:2em 5% 0;
+		width:50%;
+		float:right;
+		@include mq(petit-ecran) {width:100%; padding:2em 0 0;}
+		@include mq(tablette) {width:100%; padding:2em 20% 0;}
+		
+		.with_frm_style input.required {color:#666;}
+		
+		input{padding:0.5em 0; }
+		
+		input[type="submit"] {
+			padding: 1em 2em;
+			@include mq(petit-ecran) {width:100%; }	
+			@include mq(tablette) {width:60%; margin: 0 20%;}	
+		
+		&:hover {
+				background-color:#BABABA;
+				-webkit-box-shadow:none;
+				-moz-box-shadow: none;
+				-o-box-shadow:none;
+				box-shadow:none;
+				}
+		}
+		
+		textarea {color:#222222;}
+
+}//article #post-19
+
+.info-contact {width:50%;
+			margin-top:10em;
+			float:left;
+			@include mq(tablette) {margin:0 0 2em 0; width:100%; float:right;}
+			@include mq(petit-ecran) {margin:0 0 2em 0; width:100%; float:right;}
+
+		 	.adresse {width:100%;
+				float:left;
+				padding:0 10% 2em;
+				@include mq(tablette) {width:100%; padding:0;}
+				@include mq(petit-ecran) {width:100%; padding:0;}
+				}
+
+				p {float:left;
+					width:100%;
+					color:$gris;
+					font-size:0.75em; 
+					text-align:center;
+					padding:0 2em; 
+					line-height:1.4em;
+				}
+
+				.img-footer-index {float:left;
+								width:100%;
+								text-align:center;	
+
+								img {margin-bottom:0.5em;
+									max-width:100%;
+									text-align:center;
+								}									
+				}
+
+
+}

@@ -1,0 +1,131 @@
+/* ========= Index =========== */	
+
+
+#primary{position:relative;}
+
+.raya {background-color:#000000;
+height:2px;
+width:100%;
+position:absolute;
+top:3.5em;
+z-index:-9999;
+}
+
+#content  {padding:2em 5%;
+			@include mq(petit-ecran) {padding-top:2.5em;}
+
+		> h1{
+			background-color:#222222;
+			width:10em;
+			padding:0 0.5em 0 0.7em;
+			margin-left:5%;
+			@include mq(tablette-landscape) {margin:0; padding:0 0.5em 0 0.4em;}
+			@include mq(tablette) {margin:0; padding:0 0.5em 0 0.4em;}
+			@include mq(petit-ecran) {margin:0; padding:0 0.5em 0 0.6em;}
+		}
+
+		> h2 {
+			font-size:0.92em;
+			padding:0 0 0 1.1em;
+			margin-left:5%;
+			line-height:1em;
+			@include mq(tablette-landscape) {margin:0; padding:0 0 0 0.7em;}
+			@include mq(tablette) {margin:0; padding:0 0 0 0.7em;}
+			@include mq(petit-ecran) {margin:0; padding:0 0 0 0.9em;}
+		}
+		
+		.slider {position:relative;
+				margin:2em 10%;
+				@include mq(petit-ecran) {margin:2em 0%;}
+			
+			.image-principal-index {
+			
+					img {
+						@include box-shadow(-1px, 1px, 6px, 0px, #000000);
+						max-width:100%;
+				
+					}
+			}
+			
+			.text-principal-index {position:absolute;
+									bottom:30%;
+									width:15em;
+									@include mq(tablette) {width:13em; bottom:20%;}
+									@include mq(petit-ecran) {width:7em; bottom:5%;}
+				
+									h1 {border-top:2px solid #000000;
+										border-bottom:2px solid #000000;
+										padding: 0.3em 0 0.2em 5%;
+										line-height:1em;
+										display:block;
+										font-size:2em;
+										@include mq(tablette) {font-size:2em;}
+										@include mq(petit-ecran) {font-size:1em;}
+				
+									}
+				
+									h2 {color:$gris;
+										padding-left:0.5em;
+										padding: 5% 0 1em 5%;
+										line-height:1.3em;
+										@include mq(tablette) {font-size:0.75em;}
+										@include mq(petit-ecran) {font-size:0.75em; }
+									}
+				}
+		}//slider
+		
+		.module-slider-home {
+						position: relative;
+					    margin: 2em 10%;	
+						@include mq(petit-ecran) {margin:2em 0;}
+
+		}
+		
+		.info-index {margin:5em 10% 3em;
+					@include mq(tablette) {margin:0 15%;}
+					@include mq(petit-ecran) {margin:0;}
+			
+				 	.adresse {width:50%;
+						float:left;
+						padding:0 2em 0 0;
+						@include mq(tablette) {width:100%; padding:0;}
+						@include mq(petit-ecran) {width:100%; padding:0;}
+						}
+						
+					.cecoa {width:50%;
+						float:left;
+						padding:0 0 0 2em;
+						@include mq(tablette) {width:100%; padding:2em 0 0;}
+						@include mq(petit-ecran) {width:100%; padding:2em 0 0;}
+					}
+						
+						
+						p {float:left;
+							width:70%;
+							color:$gris;
+							font-size:0.75em; 
+							text-align:center;
+							padding:0 2em; 
+							line-height:1.4em;
+							@include mq(tablette) {width:70%; }
+							@include mq(petit-ecran) {width:100%; }
+						}
+						
+						.img-footer-index {float:left;
+										width:30%;
+										@include mq(tablette) {width:30%;}
+										@include mq(petit-ecran) {width:100%; text-align:center}	
+										
+										img {float:right;
+											max-width:100%;
+											@include mq(petit-ecran) {float:none;}
+										}									
+						}
+		}
+}
+
+.index .soliloquy-theme-classic .soliloquy-prev {
+  display: none; }
+
+.index .soliloquy-theme-classic .soliloquy-next {
+  display: none; }

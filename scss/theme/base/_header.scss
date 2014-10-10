@@ -1,0 +1,65 @@
+/* ========= Header =========== */
+
+#bloc-lang {float:right;
+			margin:0.5em 1em 0;
+			
+			ul  {margin-bottom:0.5em;}
+
+			li {list-style:none;
+				float:left;
+				margin-left:0.6em;
+				font-size:0.75em;
+			
+				&:nth-child(2) {list-style-type:disc; margin-left:2em;}
+			
+			}
+			
+			.active a {text-decoration: underline; }
+
+}
+
+header {margin: 0 0 0 10%;
+		position:relative;
+		@include mq(tablette-landscape) {margin:0 5%;}
+		@include mq(tablette) {margin:0 5%;}
+		@include mq(petit-ecran) {margin:0 5%;}
+
+	hgroup {width:20%;
+			margin:0;
+			float:left;
+			@include mq(tablette) {position:absolute; width:50%;}
+			@include mq(petit-ecran) {position:absolute; width:75%; margin-top:0.6em;}
+	
+			h1 a {	background: url('img/logo-flak-grand.svg') no-repeat;
+					display:block;
+					margin-top:0.05em;
+					text-indent:-9999px;
+					width:250px;
+					height:53px;
+					float:left;
+					@include mq(petit-ecran) {background: url('img/logo-flak-petit.png') no-repeat;
+											background: url('img/logo-flak-petit.svg') no-repeat;
+											width:180px;
+											height:35px;
+											margin-top:0.2em;
+					}
+			}
+	
+	}				
+	
+	nav {float:left;
+		width:80%;
+		padding-left: 1em;
+		@include mq(tablette-landscape) {width:100%; padding-left: 0;}
+		@include mq(tablette) {width:100%;  margin-top: 1.3em; padding-left: 0;}
+		@include mq(petit-ecran) {width:100%; margin-top:1em; padding-left: 0;}
+		
+		h1 {
+			@include mq(tablette) {width:100%; text-align:right; display:block; font-size:1em;}
+			@include mq(petit-ecran) {width:100%; text-align:right; display:block; font-size:1em; }
+		}
+	}	
+	
+}//Header
+
+.no-svg header hgroup h1 a {background: url('img/logo-flak-grand.png') no-repeat; }
