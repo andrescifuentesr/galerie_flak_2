@@ -1,8 +1,8 @@
 <?php
 	$argsSlider = array(
 		'post_type' 		=> 'home-slider', 	//Costum type Proyectos			
-		'order'				=> 'ASC',			// List in ascending order
-		'orderby'      		=> 'id',			// List them in their menu order
+		'order'				=> 'DESC',			// List in ascending order
+		'orderby'      		=> 'menu_order',	// List them in their menu order
 		'posts_per_page'	=>   -1, 			// Show all
 	);
 
