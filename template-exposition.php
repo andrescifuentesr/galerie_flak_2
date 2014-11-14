@@ -55,7 +55,7 @@ get_header(); ?>
 								<?php }  ?>
 
 								<div class="contenu-exposition-single">
-									<h1 class="entry-title"><?php the_title(); ?></h1>
+									<h1 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></h1>
 									<h3><?php the_field('date_expo_'.$currentLang.''); ?></h3>
 
 									<p class="txt_exposition"><?php the_field('txt_exposition_'.$currentLang.''); ?></p>
@@ -138,7 +138,7 @@ get_header(); ?>
 									<?php }  ?>
 
 									<div class="contenu-exposition-single">
-										<h1 class="entry-title"><?php the_title(); ?></h1>
+										<h1 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></h1>
 										<h3><?php the_field('date_expo_'.$currentLang.''); ?></h3>
 
 										<p class="txt_exposition"><?php the_field('txt_exposition_'.$currentLang.''); ?></p>

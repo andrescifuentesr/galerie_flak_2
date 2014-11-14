@@ -57,7 +57,7 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			
 			<div class="single-content">
-				<?php the_content(); ?>					
+				<?php the_content(); ?>			
 				
 				<div class="text-catalogue">
 					<!-- On defini s'il existe un e-catalogue  -->

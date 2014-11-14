@@ -36,9 +36,9 @@ get_header(); ?>
 				
 				<?php
 				if ( in_category('publication') ) {
-					get_template_part( 'publication', 'single' ); 
+					get_template_part( 'content', 'publication' ); 
 				} elseif ( in_category('exposition') ) {
-					get_template_part( 'exposition', 'single' ); 
+					get_template_part( 'content', 'exposition' ); 
 				} else {
 					get_template_part( 'content', 'single' ); 
 				}

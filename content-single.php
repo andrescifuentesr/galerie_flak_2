@@ -18,6 +18,13 @@
 			
 			<div class="single-content">
 				<?php the_content(); ?>
+
+				<?php if( get_field('information_additionnel_'.$currentLang) ) { ?>
+					<div class="block-savoir-plus">
+						En savoir plus <br>
+						<?php the_field('information_additionnel_'.$currentLang); ?>
+					</div>
+				<?php } ?>
 			</div>
 			
 			<?php //on appele le template carte  ?>
@@ -60,43 +67,33 @@
 		
 			</div><!-- module-slider -->
 
-<!-- Module pour les publication -->			
+			<!-- Module pour les publication -->			
 			<?php
-				$category = get_the_category();
-				$category_publication = $category[1]->name;
-				$category_publication_id   = $category[1]->cat_ID;
+				$categories = get_the_category();
+				if($categories){
+					foreach($categories as $category) {
 
-				if ( !empty($category_publication) AND $category_publication !=  'Nouvelles acquisitions') 
-				{
-					$category_current=$category_publication; 
-				} else { 
-					$category_current= "Pas de publication ";
-				}
+						$args = array(
+							'category__and' => array( $category->cat_ID , 11 ), // On limite à afficher que les pieces qui sont fis de cat = pub
+							'order'			 => 'DESC',				// List in ascending order
+							'orderby'        => 'id',				// List them in their menu order
+							'showposts'   	 => 1,
+							// 'category__not_in'   	 => 23
+						);
+						$publicationPosts = new WP_Query($args);
+					
+						while ($publicationPosts->have_posts()) : $publicationPosts->the_post(); ?>			
+
+							<div class="module-publication-single">
+								<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail($id, 'sliderimg-pub'); ?></a>
+								<a class="titre-module-publication-single" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							</div>
+
+					 	<?php endwhile; 
+					} //end foreach
+				}//end if
 			?>
-			
-			<?php if (has_category( $category_current, $post ) ) { ?>
-			
-				<?php
-					$args = array(
-						'category__and' => array( $category_publication_id, 11 ), // On limite à afficher que les pieces qui sont fis de cat = pub
-						'order'			 => 'DESC',				// List in ascending order
-						'orderby'        => 'id',				// List them in their menu order
-						'showposts'   	 => 1,
-					);
-			        $publicationPosts = new WP_Query($args);
-		        ?>
-		
-		        <?php while ($publicationPosts->have_posts()) : $publicationPosts->the_post(); ?>			
-			
-				<div class="module-publication-single">
-					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail($id, 'sliderimg-pub'); ?></a>
-					<div class="fleche"></div>
-					<a class="titre-module-publication-single" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-				</div>
-			
-				 <?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			<?php } ?>
+			<?php wp_reset_postdata(); ?>
 			
 			
 			<?php if( get_field('video') ) {  ?>
@@ -125,46 +122,5 @@
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-<div class="module-slider-footer-interieur">
-	<div class="interieur gauche">
-		<?php get_search_form(); ?>	
-	</div>
-</div>
-
-<?php // on cree un bouton partager par mail ?>
-<?php // $link_actuel =  echo get_permalink( $post->ID ); ?>
-<?php $link_actuel = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>
-
-<div class="module-enveloppe">
-	
-	<?php if($currentLang == 'fr') { ?>
-	
-		<a href="mailto:?subject=Galerie Flak / <?php the_title(); ?>&amp;body=Bonjour, %0A%0A
-			L'œuvre suivante présentée à la Galerie Flak vous est recommandée : %0A%0A
-			<?php the_permalink(); ?> %0A%0A
-			%0A%0A
-			Bonne journée" 
-			title="Partager par Email" class="enveloppe-partager">
-			<img src="<?php bloginfo('template_directory'); ?>/img/enveloppe.svg" alt="Enveloppe" >
-		</a>
-
-	<?php } else { ?>
-		<a href="mailto:?subject=Galerie Flak / <?php the_title(); ?>&amp;body=Hello %0A%0A
-			I thought you might be interested in this artwork presented by Galerie Flak: <lien> %0A%0A
-			<?php the_permalink(); ?> %0A%0A
-			%0A%0A
-			All the best" 
-			title="Share" class="enveloppe-partager">
-			<img src="<?php bloginfo('template_directory'); ?>/img/enveloppe.svg" alt="Enveloppe" >
-		</a>
-	<?php } ?>
-
-	<a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>&t=<?php echo urlencode($post->post_title); ?>" target="_blank" class="enveloppe-partager">
-		<img src="<?php bloginfo('template_directory'); ?>/img/bt-facebook.svg" alt="Bouton partager facebook" width="25" height="25">
-	</a>
-	
-	<a href="http://twitter.com/share?text=<?php the_title(); ?>&url=http://<?php echo $link_actuel; ?>" target="_blank" class="enveloppe-partager">
-		<img src="<?php bloginfo('template_directory'); ?>/img/bt-twitter.svg" alt="Bouton partager twitter" width="25" height="25">
-	</a>
-	
-</div>
+<?php //we include the footer template ?>
+<?php get_template_part( 'inc/template-single-footer' );  ?>
