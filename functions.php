@@ -60,6 +60,11 @@ function galerie_flak_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/**
+	 * Enable page Attributes for Post
+	 */
+	add_post_type_support( 'post', 'page-attributes' );
+
+	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
@@ -126,7 +131,7 @@ function galerie_flak_scripts() {
 	wp_enqueue_script( 'general-zip', get_template_directory_uri() . '/js/inc-js-zip-ck.js', array( 'jquery' ), '', true );
 	
 	//flexslider pour le pages category
-	if ( is_category() ) {
+	if ( is_category() OR in_category('exposition') ) {
 		wp_enqueue_script( 'script-flexslider-cat', get_template_directory_uri() . '/js/script-flexslider-cat.js', array( 'jquery' ), '', true );
 	}
 

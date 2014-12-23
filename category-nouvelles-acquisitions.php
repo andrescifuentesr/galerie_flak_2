@@ -22,10 +22,10 @@
 						        <?php
 					
 								$args = array(
-									'cat'				=> $category_id, 		//the current category
-									'posts_per_page'	=> -1,					// Only the first 20
-									'order'				=> 'DESC',				// List in ascending order
-									'orderby'        	=> 'id',			// List them in their menu order				
+									'cat'					=> $category_id, 		//the current category
+									'posts_per_page'		=> -1,					// Only the first 20
+									'order'					=> 'DESC',				// List in desscending order
+									'orderby'        		=> 'menu_order',		// List them in their menu order			
 								);
 							
 						        $carouselPosts = new WP_Query();

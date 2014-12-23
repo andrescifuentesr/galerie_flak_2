@@ -5,32 +5,6 @@
 	$category 		= get_category( get_query_var( 'cat' ) );
 	$category_id 	= $category->cat_ID;
 	$category_slug 	= $category->slug;
-
-/*
-	$category = get_the_category();
-	$category_principal = $category[1]->cat_ID;
-	
-	if 	(is_category(3) )	  {$category_id = 3;  $page_id = 4772;} //Afrique
-	elseif (is_category(6) )  {$category_id = 6;  $page_id = 4775;} //Amérique du Nord
-	elseif (is_category(39) ) {$category_id = 39; $page_id = 4774;} //Asie
-	elseif (is_category(8) )  {$category_id = 8;  $page_id = 4780;} //Contemporary Art
-	elseif (is_category(27) ) {$category_id = 27; $page_id = 4781;} //Mobilier design
-	elseif (is_category(4) )  {$category_id = 4;  $page_id = 4773;} //Océanie
- 	elseif (is_category(28) ) {$category_id = 28; $page_id = 4776;} //Photos Afrique
-	elseif (is_category(29) ) {$category_id = 29; $page_id = 4777;} //Photos Amérique du Nord
-	elseif (is_category(30) ) {$category_id = 30; $page_id = 4778;} //Photos Océanie 
-	elseif (is_category(32) ) {$category_id = 32; $page_id = 4779;} //Early photographs: Contemporary
-	elseif (is_category(229) ) {$category_id = 229; $page_id = 7662;} //Kachinas
-	
-	//Pour les publications
-	if ($category_principal  == 11) 
-		{
-		$category_publication = $category[0]->cat_ID;	
-	} 
-	else {
-		$category_publication = $category_principal;	
-	}
-*/	
 ?>
 
 <?php 	$currentLang = qtrans_getLanguage(); ?>
@@ -56,7 +30,9 @@
 								$args = array(
 									'cat'				=> $category_id, 		//the current category
 									'posts_per_page'	=> 20,					// Only the first 20
-									'post__in'  		=> $sticky,			
+									'post__in'  		=> $sticky,
+									'order'				=> 'DESC',				// List in desscending order
+									'orderby'        	=> 'menu_order',		// List them in their menu order
 								);
 
 						        $carouselPosts = new WP_Query($args);
@@ -90,8 +66,8 @@
 										'posts_per_page'		=> -1,					// Only the first 20
 										'ignore_sticky_posts'	=> 1,
 										'post__not_in'			=> get_option( 'sticky_posts' ),
-										'order'				=> 'DESC',				// List in ascending order
-										'orderby'        	=> 'id',		// List them in their menu order				
+										'order'					=> 'DESC',				// List in desscending order
+										'orderby'        		=> 'menu_order',		// List them in their menu order
 									);
 
 						        	$carouselPosts2 = new WP_Query($args2);

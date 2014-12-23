@@ -7,7 +7,14 @@
 
 <?php
 	$category = get_the_category();
-	$category_id = $category[1]->cat_ID;
+
+	$category_principal = $category[0]->cat_ID;
+	if ($category_principal  == 24) {
+		$category_id = $category[1]->cat_ID;	
+	} else {
+		$category_id = $category_principal;	
+	}
+
 	$currentLang = qtrans_getLanguage();
 ?>
 
@@ -74,8 +81,8 @@
 		
 			<div class="module-slider loading">
 				<div class="flexslider carousel flexslider-expo">
-				    <ul class="slides">
-				        <?php
+					<ul class="slides">
+						<?php
 			
 						$args = array(
 						
@@ -86,24 +93,24 @@
 							'orderby'        	=> 'id',			// List them in their menu order				
 						);
 			
-				        $carouselPosts = new WP_Query($args);
-	       
-				        ?>
-				        <?php while ($carouselPosts->have_posts()) : $carouselPosts->the_post(); ?>
-				        <li>
+						$carouselPosts = new WP_Query($args);
+		   
+						?>
+						<?php while ($carouselPosts->have_posts()) : $carouselPosts->the_post(); ?>
+						<li>
 							<div class="image-carrousel">
-					            <?php $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'sliderimg' ); ?>
-					            <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php echo '<img src="' . $image_src[0]  . '" width="100%"  />'; ?></a>
+								<?php $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'sliderimg' ); ?>
+								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php echo '<img src="' . $image_src[0]  . '" width="100%"  />'; ?></a>
 							</div>
 				
 							<div style="clear:both"></div>
 				
-				            <div class="slider-title">
+							<div class="slider-title">
 								<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 							</div>
-				        </li>
-				        <?php endwhile; ?>
-				    </ul>
+						</li>
+						<?php endwhile; ?>
+					</ul>
 			
 				<?php wp_reset_postdata();?>
 				</div><!-- 1- module-slider  -->

@@ -19,16 +19,20 @@
 			<div class="single-content">
 				<?php the_content(); ?>
 
+				<?php //on appele le template carte  ?>
+				<?php get_template_part( 'carte' );  ?>				
+
 				<?php if( get_field('information_additionnel_'.$currentLang) ) { ?>
 					<div class="block-savoir-plus">
-						En savoir plus <br>
-						<?php the_field('information_additionnel_'.$currentLang); ?>
+						<span id="block-savoir-plus--button">
+							<?php echo __("<!--:fr-->En savoir plus<!--:--><!--:en-->Read More<!--:-->"); ?>
+						</span>
+						<div class="block-savoir-plus--content">
+							<?php the_field('information_additionnel_'.$currentLang); ?>
+						</div>
 					</div>
 				<?php } ?>
 			</div>
-			
-			<?php //on appele le template carte  ?>
-			<?php get_template_part( 'carte' );  ?>
 			
 		</div><!-- .module-single -->		
 

@@ -4,11 +4,11 @@
 
 jQuery(function($) {
 //  Carousel direction vertical
-    $('#foo3').carouFredSel({
+	$('#foo3').carouFredSel({
 		height : "100%",
 		auto: false,
 		direction : "up",
-        items	: 4,
+		items	: 4,
 		swipe       : {
 				onTouch : true
 		},
@@ -22,36 +22,39 @@ jQuery(function($) {
 			key		: "right",
 			items	:2
 		}
-    });
+	});
 
 //=============================
 //=====   Fancybox
 //=============================
 	
 	// Initialize the Lightbox for any links with the 'fancybox' class
-    $(".fancybox").fancybox();
-    // Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif
-    $("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox(
+	$(".fancybox").fancybox();
+	// Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif
+	$("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox(
 	{
 	padding : 5
 	});
 	
-    // Initialize the Lightbox and add rel="gallery" to all gallery images when the gallery is set up using  so that a Lightbox Gallery exists
-    $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();
-    // Initalize the Lightbox for any links with the 'video' class and provide improved video embed support
-    $(".video").fancybox({
-        fitToView       : false,
-        width           : '70%',
-        height          : '70%',
-        autoSize        : false,
-        closeClick      : false,
-        openEffect      : 'none',
-        closeEffect     : 'none',
+	// Initialize the Lightbox and add rel="gallery" to all gallery images when the gallery is set up using  so that a Lightbox Gallery exists
+	$(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();
+	// Initalize the Lightbox for any links with the 'video' class and provide improved video embed support
+	$(".video").fancybox({
+		fitToView       : false,
+		width           : '70%',
+		height          : '70%',
+		autoSize        : false,
+		closeClick      : false,
+		openEffect      : 'none',
+		closeEffect     : 'none',
 		helpers : {
 					media : {}
 				}
-    });
+	});
 
+	$('#block-savoir-plus--button').on('click', function () {
+		$('.block-savoir-plus--content').toggleClass('block-savoir-plus--active');
+	});
 });
 
 //========================
