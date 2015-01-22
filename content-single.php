@@ -17,10 +17,16 @@
 			<h3><?php the_field('localisation_'.$currentLang.''); ?></h3>
 			
 			<div class="single-content">
-				<?php the_content(); ?>
+
+				<!-- We call directly a template for the gallery instead a shortcode 12-01-2015 -->
+				<?php get_template_part( 'inc/template-instant-gallery' );  ?>
+
+				<div class="text-the_content">
+					<?php the_content(); ?>
+				</div>
 
 				<?php //on appele le template carte  ?>
-				<?php get_template_part( 'carte' );  ?>				
+				<?php get_template_part( 'carte' );  ?>			
 
 				<?php if( get_field('information_additionnel_'.$currentLang) ) { ?>
 					<div class="block-savoir-plus">

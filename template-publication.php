@@ -82,7 +82,12 @@ get_header(); ?>
 									}
 								?>
 
-								<?php the_content(); ?>					
+								<!-- We call directly a template for the gallery instead a shortcode 12-01-2015 -->
+								<?php get_template_part( 'inc/template-instant-gallery' );  ?>
+
+								<div class="text-the_content">
+									<?php the_content(); ?>
+								</div>				
 
 								<div class="text-catalogue">
 									<!-- On defini s'il existe un e-catalogue  -->

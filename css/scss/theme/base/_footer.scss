@@ -1,0 +1,80 @@
+.module-slider-footer {
+	float:left;
+	width:100%;
+	margin-bottom:1em;
+	
+	.gauche {float:left;
+			width:30%; 
+			margin:0 35% 2em;
+			text-align:right;
+			@include mq(tablette) {width:50%; margin:3em 20% 2em 30%;}
+			@include mq(petit-ecran) {width:80%; margin:2em 10%;}
+			
+		
+		input {font-family: "futura_ltlight", arial;
+				background:$fondo;
+				border:2px solid black; 
+				@include rounded($radius: 5px);
+		 		color:$white;
+				padding:0.7em 0 0.7em 1em; 
+				width:100%;
+				font-size:0.925em;
+				background: url(../../../img/recherche_lupa.png) 100% 0 no-repeat;
+				//@include mq(tablette) {width:100%; }
+				//@include mq(petit-ecran) {width:80%; margin:0 10%}		
+		}
+		
+		input:focus {border: 2px solid $gris; -webkit-box-shadow:none; 
+		outline: none;}
+		
+		input[type="submit"] {webkit-box-shadow:none}
+		input[type="text"] {box-shadow:none; }
+		
+		input::-webkit-input-placeholder { color:$white; font-family:'futura_ltlight', arial;}
+		input::-moz-placeholder { color:$white; font-family:'futura_ltlight', arial;} /* firefox 19+ */
+		input-moz-placeholder { color:$white; font-family:'futura_ltlight', arial;}
+	
+	}
+	
+}
+
+.module-slider-footer-interieur {
+	float:left;
+	margin:0 0 2em;
+	width:100%;
+	
+	.interieur {float:left;
+	}
+	
+	.gauche {width:100%;
+			text-align:center;
+			margin-top:2em;
+			@include mq(petit-ecran) {width:100%; margin-top:0em;}
+		
+		input {background:$fondo; border:2px solid black; 
+				@include rounded($radius: 5px);
+		 		color:$white; 
+				padding:0.7em 0 0.7em 1em; 
+				width:30%;
+				font-size:0.925em;
+				background: url(../../../img/recherche_lupa.png) 100% 0 no-repeat; 	
+				@include mq(tablette-landscape) {width:40%;}
+				@include mq(tablette) {width:50%;}
+				@include mq(petit-ecran) {width:80%; margin: 0 10%;}	
+		}
+		
+		input:focus {border: 2px solid $gris; -webkit-box-shadow:none; 
+		outline: none;}
+		
+		input[type="submit"] {webkit-box-shadow:none}
+		input[type="text"] {box-shadow:none; }
+		
+		input::-webkit-input-placeholder { color:$white; font-family:'futura_ltlight', arial;}
+		input::-moz-placeholder { color:$white; font-family:'futura_ltlight', arial;} /* firefox 19+ */
+		input-moz-placeholder { color:$white; font-family:'futura_ltlight', arial;}
+	
+	}
+				
+}
+
+.site-footer {color:$gris;}

@@ -1,0 +1,53 @@
+.list_carousel_2 {
+	position:relative;
+    width: 100%;
+	height:430px;
+}
+
+.list_carousel_2 img {
+	display:block;
+	max-width:70%;
+	//height:auto;
+	@include box-shadow(-1px, 1px, 6px, 0px, #000000);
+	margin: 5px;	
+}
+
+.list_carousel_2 ul {
+    list-style: none;
+    display: block;
+	margin:1em 0 0;
+}
+.list_carousel_2 li {
+    margin:0 0 0;
+    display: block;
+    float: left;
+	width:90px;
+	height:100px;
+}
+
+.list_carousel_2 a.prev, .list_carousel_2 a.next  {
+    display: block;
+    position: absolute;
+    height: 23px;
+    width: 100%;
+	top:30%;
+	opacity:0.8;
+}
+
+.list_carousel_2 a.prev {background: url(../../../img/fleches-up.svg) no-repeat 0 -23px; 
+	top:105%; 
+}
+.list_carousel_2 a.next {background: url(../../../img/fleches-up.svg) no-repeat;
+	top: -1em;	
+}
+
+.list_carousel_2 a.prev:hover, a.next:hover {opacity:1;
+    cursor: pointer;
+}
+
+.list_carousel_2 a.prev.disabled, a.next.disabled {
+    cursor: default;
+}
+.list_carousel_2 a.prev span, a.next span {
+    display: none;
+}

@@ -1,0 +1,88 @@
+/* ========= Category =========== */
+
+.category-oeuvre, .category-publi, .category-expo, .category-video {
+								font-size: 0.9em;
+								font-family: "futura_ltlight", arial;
+								margin:0 5%;
+								padding-top:2em;
+								max-width:1300px;
+								@include mq(tablette-landscape) {margin:0;}
+								@include mq(tablette) {margin:0;}
+								@include mq(petit-ecran) {margin:0 auto; max-width:400px;}
+								
+								.module-slider, .module-slider-total {margin:2em 0 0;
+												@include mq(petit-ecran) {margin:0;}
+								}
+								
+								.module-slider-video{margin: 2em 0;
+													@include mq(petit-ecran) {margin:0;}
+								
+								} 
+
+								.module-slider-footer {margin: 2em 0; 
+														@include mq(petit-ecran) {margin: 0 0 2em;}
+								}
+								
+								.module-expo-archive {float:left;
+													margin-top:2em;
+													padding-left:3em;
+													width:100%;
+
+													img {@include box-shadow(-1px, 1px, 6px, 0px, #000000);}
+
+															.titre-module-publication-single {margin-top:0.5em;
+																								display:block;
+																								
+															}
+								}
+								
+								h2 {border-bottom:2px solid #000000;
+									color:$white;
+									font-size:1.25em;
+									display:inline;
+									padding:0.25em 0 0;
+									}
+									
+									
+								.module-apercu-complete {
+									float: left;
+								    width: 25%;
+									@include mq(tablette-landscape) {width: 30%;}
+									@include mq(tablette) {width: 50%; margin: 0 25% 2em; text-align: center;}
+									@include mq(petit-ecran) {width: 80%; margin: 0 10% 2em; text-align: center;}
+								}
+								
+								.apercu-hack {
+									width: 30%;
+								    margin: 0 30% 2em 15%;
+									@include mq(tablette-landscape) {width: 40%; margin: 0 5% 2em 15%;}
+									@include mq(tablette) {width: 50%; margin: 0 25% 2em;}
+									@include mq(petit-ecran) {width: 80%; margin: 0 10% 2em; }
+								
+								}
+								
+								.fleche-separateur {
+									font-family: "HelveticaNeueLT-UltraLight", Helvetica, Arial;
+								    text-transform: uppercase;
+								    font-size: 1em;
+								    letter-spacing: 1px;
+								    padding-left: 1em;
+									@include mq(tablette) {padding-left: 0;}
+									@include mq(petit-ecran) {padding-left: 0;}
+								}
+								
+								.fleche-exposition {
+									background: url(../../../img/fleches-up-cat.svg) no-repeat 0 -11px;
+								    height: 11px;
+								    width: 40px;
+								    margin-left: 5.5em;
+								    display: block;
+									@include mq(tablette) {text-align: center; margin: 0 auto;}
+									@include mq(petit-ecran) {text-align: center; margin: 0 auto;}
+								}
+
+}
+
+.haut-publi {
+			@include mq(petit-ecran) {min-height:14em;}
+}

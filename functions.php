@@ -109,35 +109,20 @@ add_action( 'widgets_init', 'galerie_flak_widgets_init' );
  * Enqueue scripts and styles
  */
 function galerie_flak_scripts() {
-	wp_enqueue_style( 'style-min', get_stylesheet_uri() );
 
-/*
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+	wp_enqueue_style( 'galerie_flak-style', get_template_directory_uri() . '/css/build/minified/global.css', array(), '20141001', 'all' );
 	
-	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
-
-	 wp_enqueue_script( 'fancy-helper', get_template_directory_uri() . '/js/jquery.fancybox-media.js', array( 'jquery' ), false, true );
-	
-	wp_enqueue_script( 'touchSwipe', get_template_directory_uri() . '/js/jquery.touchSwipe.min.js', array( 'jquery' ), false, true );
-
-	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js',array( 'jquery' ), '2.2.0', true );
-	
-	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array( 'jquery' ), '2.2.0', true );
-
-	wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.1.0-packed.js', array( 'jquery' ), '6.1.0', true );
-
-	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '', true );
-*/    
-	wp_enqueue_script( 'general-zip', get_template_directory_uri() . '/js/inc-js-zip-ck.js', array( 'jquery' ), '', true );
+	//Production JS
+	wp_enqueue_script( 'galerie_flak-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20141001', true );
 	
 	//flexslider pour le pages category
 	if ( is_category() OR in_category('exposition') ) {
 		wp_enqueue_script( 'script-flexslider-cat', get_template_directory_uri() . '/js/script-flexslider-cat.js', array( 'jquery' ), '', true );
 	}
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );

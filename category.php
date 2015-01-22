@@ -105,7 +105,7 @@
 						<?php if ($count > '5') { ?>
 							<div class="module-apercu-complete">
 								<a href="#" class="fleche-separateur destructor">
-									<?php echo __("<!--:fr-->Collection complète<!--:--><!--:en-->All the collection<!--:-->"); ?>
+									<?php echo __("<!--:fr-->Voir la Collection complète<!--:--><!--:en-->View all the collection<!--:-->"); ?>
 									<span class="fleche-exposition" ></span>
 								</a>
 							</div>

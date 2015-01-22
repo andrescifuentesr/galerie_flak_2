@@ -1,4 +1,31 @@
 //=============================
+//===== Instant Gallery 
+//=============================
+
+//	Wrap the jQuery code in the generic function to allow use of 
+//  the $ shortcut in WordPress's no-conflict jQuery environment
+
+( function ($) {
+
+	$('#ig-thumbs').delegate('img','click', function(){		// When someone clicks on a thumbnail
+
+		$('#ig-hero').attr('src',$(this).attr('src').replace('-150x150',''));	// Replace the Full Sized version of selected image
+
+		$('#ig-fancy').attr('href',$(this).attr('src').replace('-150x150','')); // Replace la src for the Fancybox
+		
+		$('#ig-thumbs li img').removeClass("selected");				// Remove "selected" class from all thumbnails
+		$(this).addClass("selected");								// Add "selected" class to selected thumnail
+
+		$('#ig-title').html($(this).attr('alt'));					// Replace the Title with Title of selected image				
+	});
+
+	// Preload all other images in the slideshow so we don't have to wait
+	// when we click on them. This also helps avoid awkward transitions 
+	// when the description for the new image loads before the new image itself
+
+})(jQuery);
+
+//=============================
 //===== CarouFredSel Horizontal
 //=============================
 
