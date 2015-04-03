@@ -39,7 +39,7 @@ get_header(); ?>
 
 			        <?php while ($expoVenir->have_posts()) : $expoVenir->the_post(); ?>
 				
-						<article id="post-<?php the_ID(); ?>" class="exposition">
+						<article id="post-<?php the_ID(); ?>" class="exposition clearfix">
 
 							<div class="entry-content">
 

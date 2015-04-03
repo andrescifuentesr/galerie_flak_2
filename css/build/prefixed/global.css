@@ -3021,7 +3021,7 @@ article#post-19 textarea {
 .exposition {
   font-size: 0.9em;
   font-family: "futura_ltlight", arial;
-  margin: 0 0 0 5%;
+  margin: 0 0 3.5em 5%;
 }
 
 @media only screen and (min-width: 56em) and (max-width: 78em) {
@@ -3140,7 +3140,7 @@ article#post-19 textarea {
 @media (max-width: 37.5em) {
   .exposition .single-content .contenu-exposition-single .contenu-exposition-image {
     width: 100%;
-    margin-left: 5em;
+    padding-left: 5em;
   }
 }
 
