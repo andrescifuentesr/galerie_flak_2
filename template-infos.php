@@ -24,7 +24,7 @@ get_header(); ?>
 
 						<div class="module-infos">
 							
-							<div class="module-infos--item info-galerie-flak">
+							<div class="interieur gauche info-galerie-flak">
 								<?=the_post_thumbnail(array(auto,auto));?>
 								
 								<div class="cadre-gris">
@@ -39,16 +39,9 @@ get_header(); ?>
 									</h1>
 									<p><?php the_field('adresse_'.$currentLang.''); ?></p>
 								</div>
-							</div><!--
-							  
-						--><div class="module-infos--item info-horaires">
-								<h1>
-									<?php echo __("<!--:fr-->Services<!--:--><!--:en-->Services<!--:-->"); ?>
-								</h1>
-								<p><?php the_field('services-gauche_'.$currentLang.''); ?></p>
-							</div><!--
+							</div>
 
-						--><div class="module-infos--item module-infos--last">
+							<div class="interieur droite info-horaires">
 								<h1>
 									<?php echo __("<!--:fr-->Horaires<!--:--><!--:en-->Opening hours<!--:-->"); ?>
 								</h1>
@@ -59,23 +52,34 @@ get_header(); ?>
 						</div><!-- .entry-content -->
 					
 						<div class="module-infos">
-							<div class="module-infos--item info-galerie">
+							<div class="interieur gauche info-galerie">
 								<h1>
 									<?php echo __("<!--:fr-->La Galerie<!--:--><!--:en-->About the Gallery<!--:-->"); ?>
 								</h1>
 								<p><?php the_field('la_galerie_'.$currentLang.''); ?></p>
-							</div><!--
+							</div>
   
-						--><div class="module-infos--item info-acces">
+							<div class="interieur droite info-acces">
 								<h1>
 									<?php echo __("<!--:fr-->Accès<!--:--><!--:en-->Access<!--:-->"); ?>
 								</h1>
 								<p><?php the_field('acces_'.$currentLang.''); ?></p>
 								<?=the_post_thumbnail(array(auto,auto));?>
 								<img src="<?php bloginfo('template_directory'); ?>/img/map.png" alt="Map d'access" class="info-acces-map">
-							</div><!--
+							</div>
 
-						--><div class="module-infos--item module-infos--last info-services">
+						</div>
+
+						<div class="module-infos">
+
+							<div class="interieur gauche">
+								<h1>
+									<?php echo __("<!--:fr-->Services<!--:--><!--:en-->Services<!--:-->"); ?>
+								</h1>
+								<p><?php the_field('services-gauche_'.$currentLang.''); ?></p>
+							</div>
+
+							<div class="interieur droite info-services">
 								<div class="cecoa">
 									<!-- <?=the_post_thumbnail(array(auto,auto));?> -->
 									<img src="<?php bloginfo('template_directory'); ?>/img/cecoa.png" alt="cecoa">

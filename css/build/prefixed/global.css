@@ -2322,38 +2322,71 @@ article#post-15 .module-infos {
   width: 100%;
 }
 
-article#post-15 .module-infos .module-infos--item {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
+article#post-15 .module-infos .interieur {
+  float: left;
+  width: 45%;
+}
+
+@media only screen and (min-width: 37.5em) and (max-width: 56em) {
+  article#post-15 .module-infos .interieur {
+    width: 100%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  article#post-15 .module-infos .interieur {
+    width: 100%;
+  }
+}
+
+article#post-15 .module-infos .gauche {
   margin-right: 5%;
   margin-top: 6em;
 }
 
 @media only screen and (min-width: 56em) and (max-width: 78em) {
-  article#post-15 .module-infos .module-infos--item {
+  article#post-15 .module-infos .gauche {
     margin-top: 3em;
   }
 }
 
 @media only screen and (min-width: 37.5em) and (max-width: 56em) {
-  article#post-15 .module-infos .module-infos--item {
-    width: 100%;
+  article#post-15 .module-infos .gauche {
     margin-right: 0;
     margin-top: 1em;
   }
 }
 
 @media (max-width: 37.5em) {
-  article#post-15 .module-infos .module-infos--item {
-    width: 100%;
+  article#post-15 .module-infos .gauche {
     margin-right: 0;
     margin-top: 1em;
   }
 }
 
-article#post-15 .module-infos .module-infos--last {
-  margin-right: 0;
+article#post-15 .module-infos .droite {
+  margin-left: 5%;
+  margin-top: 6em;
+}
+
+@media only screen and (min-width: 56em) and (max-width: 78em) {
+  article#post-15 .module-infos .droite {
+    margin-top: 3em;
+  }
+}
+
+@media only screen and (min-width: 37.5em) and (max-width: 56em) {
+  article#post-15 .module-infos .droite {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 37.5em) {
+  article#post-15 .module-infos .droite {
+    margin-left: 0;
+    margin-top: 1em;
+  }
 }
 
 article#post-15 .module-infos .info-acces div {
@@ -2387,16 +2420,8 @@ article#post-15 .module-infos .cadre-gris {
   margin-right: 5%;
 }
 
-@media only screen and (min-width: 56em) and (max-width: 78em) {
-  article#post-15 .module-infos .cadre-gris {
-    width: 70%;
-    margin: 0 0 0;
-  }
-}
-
 @media only screen and (min-width: 37.5em) and (max-width: 56em) {
   article#post-15 .module-infos .cadre-gris {
-    width: 80%;
     margin: 2em 0 0;
   }
 }
@@ -2415,13 +2440,7 @@ article#post-15 .module-infos .cadre-gris img {
 article#post-15 .module-infos .galerie {
   display: block;
   float: right;
-  width: 100%;
-}
-
-@media only screen and (min-width: 56em) and (max-width: 78em) {
-  article#post-15 .module-infos .galerie {
-    width: 100%;
-  }
+  width: 50%;
 }
 
 @media only screen and (min-width: 37.5em) and (max-width: 56em) {
