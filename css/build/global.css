@@ -2129,61 +2129,34 @@ article#post-15 .module-infos {
   float: left;
   width: 100%;
 }
-article#post-15 .module-infos .interieur {
-  float: left;
-  width: 45%;
-}
-@media only screen and (min-width: 37.5em) and (max-width: 56em) {
-  article#post-15 .module-infos .interieur {
-    width: 100%;
-  }
-}
-@media (max-width: 37.5em) {
-  article#post-15 .module-infos .interieur {
-    width: 100%;
-  }
-}
-article#post-15 .module-infos .gauche {
+article#post-15 .module-infos .module-infos--item {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
   margin-right: 5%;
   margin-top: 6em;
 }
 @media only screen and (min-width: 56em) and (max-width: 78em) {
-  article#post-15 .module-infos .gauche {
+  article#post-15 .module-infos .module-infos--item {
     margin-top: 3em;
   }
 }
 @media only screen and (min-width: 37.5em) and (max-width: 56em) {
-  article#post-15 .module-infos .gauche {
+  article#post-15 .module-infos .module-infos--item {
+    width: 100%;
     margin-right: 0;
     margin-top: 1em;
   }
 }
 @media (max-width: 37.5em) {
-  article#post-15 .module-infos .gauche {
+  article#post-15 .module-infos .module-infos--item {
+    width: 100%;
     margin-right: 0;
     margin-top: 1em;
   }
 }
-article#post-15 .module-infos .droite {
-  margin-left: 5%;
-  margin-top: 6em;
-}
-@media only screen and (min-width: 56em) and (max-width: 78em) {
-  article#post-15 .module-infos .droite {
-    margin-top: 3em;
-  }
-}
-@media only screen and (min-width: 37.5em) and (max-width: 56em) {
-  article#post-15 .module-infos .droite {
-    margin-left: 0;
-    margin-top: 1em;
-  }
-}
-@media (max-width: 37.5em) {
-  article#post-15 .module-infos .droite {
-    margin-left: 0;
-    margin-top: 1em;
-  }
+article#post-15 .module-infos .module-infos--last {
+  margin-right: 0;
 }
 article#post-15 .module-infos .info-acces div {
   float: left;
@@ -2204,15 +2177,22 @@ article#post-15 .module-infos .info-acces img {
   margin-top: 2em;
 }
 article#post-15 .module-infos .cadre-gris {
-  width: 45%;
+  max-width: 45%;
   min-height: 8em;
   float: left;
   margin-top: -1em;
   display: block;
   margin-right: 5%;
 }
+@media only screen and (min-width: 56em) and (max-width: 78em) {
+  article#post-15 .module-infos .cadre-gris {
+    width: 70%;
+    margin: 0 0 0;
+  }
+}
 @media only screen and (min-width: 37.5em) and (max-width: 56em) {
   article#post-15 .module-infos .cadre-gris {
+    width: 80%;
     margin: 2em 0 0;
   }
 }
@@ -2228,7 +2208,12 @@ article#post-15 .module-infos .cadre-gris img {
 article#post-15 .module-infos .galerie {
   display: block;
   float: right;
-  width: 50%;
+  width: 100%;
+}
+@media only screen and (min-width: 56em) and (max-width: 78em) {
+  article#post-15 .module-infos .galerie {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 37.5em) and (max-width: 56em) {
   article#post-15 .module-infos .galerie {
@@ -2249,6 +2234,21 @@ article#post-15 .module-infos h1 {
   border-bottom: 2px solid #000000;
   text-transform: uppercase;
   margin-bottom: 3em;
+}
+article#post-15 .module-infos .info-services {
+  text-align: center;
+}
+@media only screen and (min-width: 37.5em) and (max-width: 56em) {
+  article#post-15 .module-infos .cecoa {
+    width: 60%;
+    margin: 5em 20% 2em;
+  }
+}
+@media (max-width: 37.5em) {
+  article#post-15 .module-infos .cecoa {
+    width: 90%;
+    margin: 3em 5%;
+  }
 }
 
 /* ========= Contact =========== */
