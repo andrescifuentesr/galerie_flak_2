@@ -44,8 +44,14 @@ function add_menu_icons_styles(){
 ?>
  
 <style>
+/* slider */
 #menu-posts-home-slider .wp-menu-image:before {
 	content: "\f161";
+}
+
+/* press */
+#menu-posts-presse .wp-menu-image:before {
+	content: "\f488";
 }
 
 </style>

@@ -116,7 +116,7 @@ function galerie_flak_scripts() {
 	wp_enqueue_script( 'galerie_flak-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20141001', true );
 	
 	//flexslider pour le pages category
-	if ( is_category() OR in_category('exposition') ) {
+	if ( is_category() OR in_category('exposition') OR is_page('revue-de-presse') ) {
 		wp_enqueue_script( 'script-flexslider-cat', get_template_directory_uri() . '/js/script-flexslider-cat.js', array( 'jquery' ), '', true );
 	}
 

@@ -3657,7 +3657,8 @@ header nav {
 .category-oeuvre,
 .category-publi,
 .category-expo,
-.category-video {
+.category-video,
+.category-presse {
   font-size: 0.9em;
   font-family: "futura_ltlight", arial;
   margin: 0 5%;
@@ -3669,7 +3670,8 @@ header nav {
   .category-oeuvre,
   .category-publi,
   .category-expo,
-  .category-video {
+  .category-video,
+  .category-presse {
     margin: 0;
   }
 }
@@ -3678,7 +3680,8 @@ header nav {
   .category-oeuvre,
   .category-publi,
   .category-expo,
-  .category-video {
+  .category-video,
+  .category-presse {
     margin: 0;
   }
 }
@@ -3687,7 +3690,8 @@ header nav {
   .category-oeuvre,
   .category-publi,
   .category-expo,
-  .category-video {
+  .category-video,
+  .category-presse {
     margin: 0 auto;
     max-width: 400px;
   }
@@ -3700,7 +3704,9 @@ header nav {
 .category-expo .module-slider,
 .category-expo .module-slider-total,
 .category-video .module-slider,
-.category-video .module-slider-total {
+.category-video .module-slider-total,
+.category-presse .module-slider,
+.category-presse .module-slider-total {
   margin: 2em 0 0;
 }
 
@@ -3712,7 +3718,9 @@ header nav {
   .category-expo .module-slider,
   .category-expo .module-slider-total,
   .category-video .module-slider,
-  .category-video .module-slider-total {
+  .category-video .module-slider-total,
+  .category-presse .module-slider,
+  .category-presse .module-slider-total {
     margin: 0;
   }
 }
@@ -3720,7 +3728,8 @@ header nav {
 .category-oeuvre .module-slider-video,
 .category-publi .module-slider-video,
 .category-expo .module-slider-video,
-.category-video .module-slider-video {
+.category-video .module-slider-video,
+.category-presse .module-slider-video {
   margin: 2em 0;
 }
 
@@ -3728,7 +3737,8 @@ header nav {
   .category-oeuvre .module-slider-video,
   .category-publi .module-slider-video,
   .category-expo .module-slider-video,
-  .category-video .module-slider-video {
+  .category-video .module-slider-video,
+  .category-presse .module-slider-video {
     margin: 0;
   }
 }
@@ -3736,7 +3746,8 @@ header nav {
 .category-oeuvre .module-slider-footer,
 .category-publi .module-slider-footer,
 .category-expo .module-slider-footer,
-.category-video .module-slider-footer {
+.category-video .module-slider-footer,
+.category-presse .module-slider-footer {
   margin: 2em 0;
 }
 
@@ -3744,7 +3755,8 @@ header nav {
   .category-oeuvre .module-slider-footer,
   .category-publi .module-slider-footer,
   .category-expo .module-slider-footer,
-  .category-video .module-slider-footer {
+  .category-video .module-slider-footer,
+  .category-presse .module-slider-footer {
     margin: 0 0 2em;
   }
 }
@@ -3752,7 +3764,8 @@ header nav {
 .category-oeuvre .module-expo-archive,
 .category-publi .module-expo-archive,
 .category-expo .module-expo-archive,
-.category-video .module-expo-archive {
+.category-video .module-expo-archive,
+.category-presse .module-expo-archive {
   float: left;
   margin-top: 2em;
   padding-left: 3em;
@@ -3762,7 +3775,8 @@ header nav {
 .category-oeuvre .module-expo-archive img,
 .category-publi .module-expo-archive img,
 .category-expo .module-expo-archive img,
-.category-video .module-expo-archive img {
+.category-video .module-expo-archive img,
+.category-presse .module-expo-archive img {
   -o-box-shadow: -1px 1px 6px 0px #000000;
   box-shadow: -1px 1px 6px 0px #000000;
 }
@@ -3770,7 +3784,8 @@ header nav {
 .category-oeuvre .module-expo-archive .titre-module-publication-single,
 .category-publi .module-expo-archive .titre-module-publication-single,
 .category-expo .module-expo-archive .titre-module-publication-single,
-.category-video .module-expo-archive .titre-module-publication-single {
+.category-video .module-expo-archive .titre-module-publication-single,
+.category-presse .module-expo-archive .titre-module-publication-single {
   margin-top: 0.5em;
   display: block;
 }
@@ -3778,7 +3793,8 @@ header nav {
 .category-oeuvre h2,
 .category-publi h2,
 .category-expo h2,
-.category-video h2 {
+.category-video h2,
+.category-presse h2 {
   border-bottom: 2px solid #000000;
   color: #ffffff;
   font-size: 1.25em;
@@ -3789,7 +3805,8 @@ header nav {
 .category-oeuvre .module-apercu-complete,
 .category-publi .module-apercu-complete,
 .category-expo .module-apercu-complete,
-.category-video .module-apercu-complete {
+.category-video .module-apercu-complete,
+.category-presse .module-apercu-complete {
   float: left;
   width: 25%;
 }
@@ -3798,7 +3815,8 @@ header nav {
   .category-oeuvre .module-apercu-complete,
   .category-publi .module-apercu-complete,
   .category-expo .module-apercu-complete,
-  .category-video .module-apercu-complete {
+  .category-video .module-apercu-complete,
+  .category-presse .module-apercu-complete {
     width: 30%;
   }
 }
@@ -3807,7 +3825,8 @@ header nav {
   .category-oeuvre .module-apercu-complete,
   .category-publi .module-apercu-complete,
   .category-expo .module-apercu-complete,
-  .category-video .module-apercu-complete {
+  .category-video .module-apercu-complete,
+  .category-presse .module-apercu-complete {
     width: 50%;
     margin: 0 25% 2em;
     text-align: center;
@@ -3818,7 +3837,8 @@ header nav {
   .category-oeuvre .module-apercu-complete,
   .category-publi .module-apercu-complete,
   .category-expo .module-apercu-complete,
-  .category-video .module-apercu-complete {
+  .category-video .module-apercu-complete,
+  .category-presse .module-apercu-complete {
     width: 80%;
     margin: 0 10% 2em;
     text-align: center;
@@ -3828,7 +3848,8 @@ header nav {
 .category-oeuvre .apercu-hack,
 .category-publi .apercu-hack,
 .category-expo .apercu-hack,
-.category-video .apercu-hack {
+.category-video .apercu-hack,
+.category-presse .apercu-hack {
   width: 30%;
   margin: 0 30% 2em 15%;
 }
@@ -3837,7 +3858,8 @@ header nav {
   .category-oeuvre .apercu-hack,
   .category-publi .apercu-hack,
   .category-expo .apercu-hack,
-  .category-video .apercu-hack {
+  .category-video .apercu-hack,
+  .category-presse .apercu-hack {
     width: 40%;
     margin: 0 5% 2em 15%;
   }
@@ -3847,7 +3869,8 @@ header nav {
   .category-oeuvre .apercu-hack,
   .category-publi .apercu-hack,
   .category-expo .apercu-hack,
-  .category-video .apercu-hack {
+  .category-video .apercu-hack,
+  .category-presse .apercu-hack {
     width: 50%;
     margin: 0 25% 2em;
   }
@@ -3857,7 +3880,8 @@ header nav {
   .category-oeuvre .apercu-hack,
   .category-publi .apercu-hack,
   .category-expo .apercu-hack,
-  .category-video .apercu-hack {
+  .category-video .apercu-hack,
+  .category-presse .apercu-hack {
     width: 80%;
     margin: 0 10% 2em;
   }
@@ -3866,7 +3890,8 @@ header nav {
 .category-oeuvre .fleche-separateur,
 .category-publi .fleche-separateur,
 .category-expo .fleche-separateur,
-.category-video .fleche-separateur {
+.category-video .fleche-separateur,
+.category-presse .fleche-separateur {
   font-family: "HelveticaNeueLT-UltraLight", Helvetica, Arial;
   text-transform: uppercase;
   font-size: 1em;
@@ -3878,7 +3903,8 @@ header nav {
   .category-oeuvre .fleche-separateur,
   .category-publi .fleche-separateur,
   .category-expo .fleche-separateur,
-  .category-video .fleche-separateur {
+  .category-video .fleche-separateur,
+  .category-presse .fleche-separateur {
     padding-left: 0;
   }
 }
@@ -3887,7 +3913,8 @@ header nav {
   .category-oeuvre .fleche-separateur,
   .category-publi .fleche-separateur,
   .category-expo .fleche-separateur,
-  .category-video .fleche-separateur {
+  .category-video .fleche-separateur,
+  .category-presse .fleche-separateur {
     padding-left: 0;
   }
 }
@@ -3895,7 +3922,8 @@ header nav {
 .category-oeuvre .fleche-exposition,
 .category-publi .fleche-exposition,
 .category-expo .fleche-exposition,
-.category-video .fleche-exposition {
+.category-video .fleche-exposition,
+.category-presse .fleche-exposition {
   background: url(../../../img/fleches-up-cat.svg) no-repeat 0 -11px;
   height: 11px;
   width: 40px;
@@ -3907,7 +3935,8 @@ header nav {
   .category-oeuvre .fleche-exposition,
   .category-publi .fleche-exposition,
   .category-expo .fleche-exposition,
-  .category-video .fleche-exposition {
+  .category-video .fleche-exposition,
+  .category-presse .fleche-exposition {
     text-align: center;
     margin: 0 auto;
   }
@@ -3917,7 +3946,8 @@ header nav {
   .category-oeuvre .fleche-exposition,
   .category-publi .fleche-exposition,
   .category-expo .fleche-exposition,
-  .category-video .fleche-exposition {
+  .category-video .fleche-exposition,
+  .category-presse .fleche-exposition {
     text-align: center;
     margin: 0 auto;
   }
